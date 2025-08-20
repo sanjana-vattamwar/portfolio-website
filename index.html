@@ -1,77 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sanjana Vattamwar • Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary">
+      <a class="brand" href="#home">SV</a>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#home" rel="noopener">Home</a></li>
+        <li><a href="#about" rel="noopener">About</a></li>
+        <li><a href="#skills" rel="noopener">Skills</a></li>
+        <li><a href="#projects" rel="noopener">Projects</a></li>
+        <li><a href="#contact" rel="noopener">Contact</a></li>
       </ul>
-      <button id="toggle-theme" title="Toggle Light/Dark Mode">🌓</button>
+      <button id="toggle-theme" class="icon-btn" title="Toggle Light/Dark Mode" aria-label="Toggle Light/Dark Mode">🌓</button>
     </nav>
-
-    <div class="intro">
-      <h1>Hi, I'm Sanjana Vattamwar</h1>
-      <h4>Coding Enthusiast</h4>
-    </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Hello! I'm a Computer Science Engineering student with a specialization in Artificial Intelligence and Machine Learning. I love solving real-world problems through code.
-    </p>
-    <p>
-      I'm also a creative soul — I enjoy singing and dancing. I'm constantly learning and growing, and I'm excited about the future of AI!
-    </p>
+  <!-- Hero -->
+  <section id="home" class="hero" aria-label="Introduction">
+    <div class="container">
+      <h1>Hi, I'm <span class="accent">Sanjana Vattamwar</span></h1>
+      <p class="subtitle">AIML Student • Coding Enthusiast • Problem Solver</p>
+      <div class="hero-cta">
+        <a class="btn" href="https://drive.google.com/file/d/1yC4w5Jtsg67YcPg-rxy4LojAeLpeHCfs/view?usp=drivesdk" target="_blank" rel="noopener">📄 Download Resume</a>
+        <a class="btn btn-secondary" href="#contact">💬 Contact Me</a>
+      </div>
+    </div>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>C</li>
-      <li>Java</li>
-      <li>Python</li>
-      <li>HTML/CSS</li>
-      <li>C++</li>
-      <li>SQL</li>
-    </ul>
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I'm a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning.
+        I love building useful software, exploring data, and turning ideas into clean, working code.
+        Outside of tech, I enjoy singing and dancing—creativity keeps me energized.
+      </p>
+    </div>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Developed "Infinite Bookshelf" – a website using HTML, CSS, and JavaScript for exploring and reading books online.</p>
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="chips">
+        <li>Python</li>
+        <li>Java</li>
+        <li>C++</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>SQL</li>
+      </ul>
+    </div>
   </section>
 
-  <section id="coding-profiles">
-    <h2>Coding Profiles</h2>
-    <ul class="profile-links">
-      <li><a href="https://www.codechef.com/users/sanjanavattam1" target="_blank">CodeChef</a></li>
-      <li><a href="https://leetcode.com/sanjana_vattam" target="_blank">LeetCode</a></li>
-      <li><a href="https://codeforces.com/profile/sanjana_vattamwar" target="_blank">Codeforces</a></li>
-      <li><a href="https://mentorpick.com/user/23251a66c5-sanjana" target="_blank">MentorPick</a></li>
-    </ul>
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+
+      <div class="grid">
+        <!-- Project: Infinite Bookshelf -->
+        <article class="card">
+          <header class="card-head">
+            <h3>📚 Infinite Bookshelf</h3>
+          </header>
+          <div class="card-body">
+            <p>
+              An online platform to explore and read books across fiction, non-fiction, and academic categories.
+              Built for clean browsing and simple reading.
+            </p>
+            <p class="meta"><strong>Tech:</strong> HTML, CSS, JavaScript, Node.js, MongoDB</p>
+          </div>
+        </article>
+
+        <!-- Project: Crime Data Analysis -->
+        <article class="card">
+          <header class="card-head">
+            <h3>🔎 Crime Data Analysis & Prediction</h3>
+          </header>
+          <div class="card-body">
+            <p>
+              Crime rate prediction using K-Means clustering with cluster labels mapped to
+              <em>High</em>, <em>Moderate</em>, and <em>Low Crime</em> for interpretability.
+            </p>
+            <p class="meta"><strong>Tech:</strong> Python, Scikit-learn, Pandas, Matplotlib</p>
+          </div>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> <a href="mailto:sanjanavattamwar@gmail.com">sanjanavattamwar@gmail.com</a></p>
-    <p><strong>Phone:</strong> +91 9515512601</p>
-    <p><strong>Location:</strong> Hyderabad, Telangana, India</p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sanjana-vattamwar-b6928a293/" target="_blank">View Profile</a></p>
+  <!-- Coding Profiles -->
+  <section class="section">
+    <div class="container">
+      <h2>Coding Profiles</h2>
+      <ul class="link-list">
+        <li><a href="https://www.codechef.com/users/sanjanavattam1" target="_blank" rel="noopener">CodeChef</a></li>
+        <li><a href="https://leetcode.com/sanjana_vattam" target="_blank" rel="noopener">LeetCode</a></li>
+        <li><a href="https://codeforces.com/profile/sanjana_vattamwar" target="_blank" rel="noopener">Codeforces</a></li>
+        <li><a href="https://mentorpick.com/user/23251a66c5-sanjana" target="_blank" rel="noopener">MentorPick</a></li>
+      </ul>
+    </div>
   </section>
 
-  <footer>
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <p><strong>Email:</strong> <a href="mailto:sanjanavattamwar@gmail.com">sanjanavattamwar@gmail.com</a></p>
+          <p><strong>Phone:</strong> +91 9515512601</p>
+          <p><strong>Location:</strong> Hyderabad, Telangana, India</p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sanjana-vattamwar-b6928a293/" target="_blank" rel="noopener">View Profile</a></p>
+        </div>
+        <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" placeholder="Your Name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="_replyto" placeholder="you@example.com" required />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
     <p>© 2025 Sanjana Vattamwar. All rights reserved.</p>
-    <p><a href="https://www.linkedin.com/in/sanjana-vattamwar-b6928a293/" target="_blank">LinkedIn</a></p>
   </footer>
 
   <script src="script.js"></script>
